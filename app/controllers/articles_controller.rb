@@ -8,4 +8,8 @@ class ArticlesController < ApplicationController
   rescue ActiveRecord::RecordNotFound
     redirect_to root_path
   end
+
+  def new 
+    @article = Article.new
+  end
 end
